@@ -70,9 +70,14 @@ a:hover {
 
 #top-nav li {
   display: inline-block;
-  /* width: 200px; */
 }
 
 .menu-item {
   margin: auto;
+}
+
+@media only screen and (max-width: 500px) {
+  #questionTemplate {
+    width: 80%;
+  }
 }
