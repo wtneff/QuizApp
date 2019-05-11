@@ -37,6 +37,9 @@ $("#startQuiz").click(function getQuestions() {
   $questionTemplate.empty();
   $("#counter").text("Points: " + counter);
   console.log(categoryVal);
+  $("#navigation")
+    .removeClass("hidden")
+    .addClass("visible");
   //console.log(difficultyVal);
   var triviaUrl =
     "https://opentdb.com/api.php?amount=10&category=" +
@@ -84,7 +87,7 @@ $("#startQuiz").click(function getQuestions() {
         $questionTemplate.append(
           "<div id=" +
             [i] +
-            ' class="question">' +
+            ' class="question hidden">' +
             '<div class="quizQuestion">' +
             questionText +
             "</div>" +
@@ -119,11 +122,52 @@ $("#startQuiz").click(function getQuestions() {
             "<br>" +
             "</div>"
         );
+
+        $("#0")
+          .removeClass("hidden")
+          .addClass("visible");
       }
     }
+    // function to show an answer has been marked
   }).done(function() {
+    var i = 0;
     $("a").on("click", function() {
       $(this).addClass("clicked");
+    });
+
+    // next navigation function
+    $("#next").on("click", function() {
+      if ([i] >= 0 && [i] < 9) {
+        $("#" + [i])
+          .removeClass("visible")
+          .addClass("hidden");
+        i = i + 1;
+        $("#" + [i])
+          .removeClass("hidden")
+          .addClass("visible");
+        $("#nxt").removeClass("clicked");
+        console.log([i]);
+      } else {
+        alert("No more questions!");
+        i = 9;
+      }
+    });
+
+    // back navigation function
+    $("#back").on("click", function() {
+      if ([i] > 0) {
+        $("#" + [i])
+          .removeClass("visible")
+          .addClass("hidden");
+        i = i - 1;
+        $("#" + [i])
+          .removeClass("hidden")
+          .addClass("visible");
+        $("#bck").removeClass("clicked");
+        console.log([i]);
+      } else {
+        alert("Can't go back any further!");
+      }
     });
   });
   return false;
