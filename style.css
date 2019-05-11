@@ -61,16 +61,19 @@ a:hover {
   width: 100%;
   background-color: rgb(91, 91, 235);
   color: #fff;
+  position: sticky;
+  top: 0;
 }
+
 #top-nav ul {
   list-style-type: none;
   padding: 15px;
   text-align: center;
 }
 
-#top-nav li {
+/* #top-nav li {
   display: inline-block;
-}
+} */
 
 .menu-item {
   margin: auto;
