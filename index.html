@@ -1,52 +1,51 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <div id="top-nav">
-  <ul>
-    <li class="menu-item">Counter: </li>
-    <!-- <li class="menu-item">Category: </li>
-    <li class="menu-item">Difficulty: </li> -->
-  </ul>
-      </div>
-
-  <div id="questionTemplate">
-  <form id="">
-    <table>
-      <tr>
-        <td>Category: </td>
-        <td><select id="categories"></select></td>
-      </tr>
-      <tr>
-        <td>Difficulty: </td>
-        <td>
-          <select id="difficulty">
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-          </select>
-        </td>
-      </tr>
-    </table>
-    <div id="quizForm questionTemplate" class="quizAnswerTab">
-      <a href="" id="startQuiz"><li class="quizAnswer">Start Quiz</li></a>
+      <ul>
+        <li id="counter" class="quizAnswer"></li>
+        <!-- <li class="menu-item">Category: </li>
+        <li class="menu-item">Difficulty: </li> -->
+      </ul>
     </div>
-  </form>
-</div>
 
+    <div id="questionTemplate">
+      <form id="">
+        <table>
+          <tr>
+            <td>Category:</td>
+            <td><select id="categories"></select></td>
+          </tr>
+          <tr>
+            <td>Difficulty:</td>
+            <td>
+              <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </td>
+          </tr>
+        </table>
 
+        <div id="quizForm questionTemplate" class="quizAnswerTab">
+          <a href="" id="startQuiz"><li class="quizAnswer">Start Quiz</li></a>
+        </div>
+      </form>
+    </div>
 
-<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-  <script src="script.js"></script>
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
