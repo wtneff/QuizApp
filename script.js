@@ -59,7 +59,7 @@ $("#startQuiz").click(function getQuestions() {
           "<tr>" +
           "<td>Category:</td>" +
           "<td><b>" +
-          //$categories.val(text) +
+          questions[0].category.toUpperCase() +
           "</b></td>" +
           "</tr>" +
           "<tr>" +
