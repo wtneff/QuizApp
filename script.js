@@ -49,7 +49,7 @@ $("#startQuiz").click(function getQuestions() {
     console.log(data.response_code);
     if (data.response_code == 1) {
       $questionTemplate.append(
-        "Error! Not enough questions in database!" +
+        "Error! Not enough questions in database for this category and difficulty combination!" +
           '<div id="quizForm questionTemplate" class="quizAnswerTab"><a href="" onclick="location.reload()"><li class="quizAnswer">Reset</li></a></div>'
       );
     } else {
@@ -125,7 +125,6 @@ $("#startQuiz").click(function getQuestions() {
     $("a").on("click", function() {
       $(this).addClass("clicked");
     });
-    //.addClass("clicked");
   });
   return false;
 });
