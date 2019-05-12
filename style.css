@@ -109,4 +109,10 @@ a:hover {
   #questionTemplate {
     width: 80%;
   }
+  #navigation {
+    width: 80%;
+  }
+  .nav-btn {
+    width: 40%;
+  }
 }
